@@ -3,7 +3,8 @@ import getopt
 
 
 class ArgumentParser():
-    def __init__(self, argv):
+    def __init__(self):
+        argv = sys.argv[1:]
         self.website = ''
         self.tagName = ''
         try:

@@ -1,4 +1,4 @@
 class Element:
-    def __init__(self, element, value):
-        self.element = element
-        self.value = value
+    def __init__(self, tagName, contents):
+        self.tagName = tagName
+        self.contents = contents
