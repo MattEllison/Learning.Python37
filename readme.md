@@ -1,6 +1,7 @@
 # Python 3.7 and BeautifulSoup project
 
 ## Need to install these dependencies
+- [Install Python 3.7](https://www.python.org/downloads/windows/)
 - PIP Install request
 - PIP Install beautifulsoup4
 
