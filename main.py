@@ -1,9 +1,11 @@
-from helpers.website import Website
-from helpers.arguments import ArgumentParser
+from helpers.websiteParser import WebsiteParser
+from helpers.argumentsParser import ArgumentParser
 
-args = ArgumentParser()
-newwebsite = Website(args.website)
+arguments = ArgumentParser()
+website = WebsiteParser(arguments.website)
 
-elements = newwebsite.getFiveElements(args.tagName)
+elements = website.getFiveElementsFor(arguments.tagName)
 for element in elements:
     print(element.contents)
+
+

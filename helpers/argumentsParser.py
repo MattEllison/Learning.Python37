@@ -1,6 +1,7 @@
 import sys
 import getopt
 
+requireArgumentsMessage = 'Params Required -w <website> -t <tagname>'
 
 class ArgumentParser():
     def __init__(self):
@@ -12,16 +13,11 @@ class ArgumentParser():
             if len(opts) != 2:
                 raise Exception()
         except:
-            print ('Params Required -w <website> -t <tagname>')
+            print (requireArgumentsMessage)
             sys.exit(2)
 
-        if len(opts) != 2:
-            print('no no')
-            sys.exit(2)
         for opt, arg in opts:
             if opt in ("-w", "--website"):
                 self.website = arg
             elif opt in ("-t", "--tagname"):
                 self.tagName = arg
-            else:
-                print('no match')

@@ -3,14 +3,14 @@ import requests
 from models.element import Element
 
 
-class Website:
+class WebsiteParser:
     def __init__(self, website):
         self.website = "http://" + website
         r = requests.get(self.website)
         data = r.text
-        self.soup = BeautifulSoup(data)
+        self.soup = BeautifulSoup(data,features="html.parser")
 
-    def getFiveElements(self, tagname):
+    def getFiveElementsFor(self, tagname):
         elements = list()
         for element in self.soup.find_all(tagname)[:5]:
             elements.append(Element(element, element.contents))
