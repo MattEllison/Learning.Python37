@@ -6,8 +6,8 @@
 
 
 # Instructions
-- py main.py -w www.google.com -t p
-- py main.py --website www.google.com --tagname p
+    py main.py -w www.google.com -t p
+    py main.py --website www.google.com --tag p
 
 ## Support
 - https://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup
